@@ -4,5 +4,6 @@ class AboutController < ApplicationController
     render "index"
   end
   def login
+     flash[:notice] = "logged in sucessfully"
   end
 end
