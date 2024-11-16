@@ -1,3 +1,15 @@
 <%= render partial: "shared/flash" %>
-<h1>hii this is the login page</h1>
+
+<%= form_with url:user_login_path,data:{turbo:false} do |form| %>
+<div class="form-group mt-3">
+<%=form.text_field :email, placeholder:"email",class:"form-control"%>
+</div>
+<div class="form-group mt-3">
+<%=form.password_field :password,placeholder:"password",class:"form-control"%>
+</div>
+<div class="mt-3 d-flex justify-content-center">
+<%=form.submit "LOGIN" , class:"btn btn-primary"%>
+</div>
+    
+<%end%>
 <%=link_to 'Go to the home page',root_path,class:"text-center" %>

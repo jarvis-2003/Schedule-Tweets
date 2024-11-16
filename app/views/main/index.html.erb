@@ -1,5 +1,13 @@
-<div class = "d-flex align-item-center justify-content-center">
+<div class = "d-flex align-items-center justify-content-center position-relative">
 <h1>Hello Welcome to scheduled tweets.</h1>
+<%if @current_user %>
+<div style="width:50px; border:1px solid black;border-radius:50%;" class = "d-flex align-items-center justify-content-center responsive-element" id="login-out">
+    <div style="font-size:30px; font-family:Lucida Console, Courier New, monospace;">
+        <%=@current_user.email.to_s[0].upcase%>
+    </div>
+</div>
+<%end%>
+
 </div>
 <%# <%=flash[:notice]%>
-<p class = "text-center"><%=link_to 'LOGIN PAGE', login_path , class: "nav-link"%></p>
+

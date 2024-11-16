@@ -1,5 +1,8 @@
 class MainController < ApplicationController
     def index
-        flash[:alert] = "Invalid email or password"
+            # puts @current_user.nil?
+            if session[:user_id]
+                    @current_user = User.find_by(id: session[:user_id])
+            end
     end
 end

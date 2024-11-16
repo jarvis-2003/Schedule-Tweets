@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ @media only screen and (max-width: 962px) {
+    .customMedia{
+        visibility: visible;
+    }
+  }
